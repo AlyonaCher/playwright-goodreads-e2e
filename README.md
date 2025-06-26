@@ -13,7 +13,7 @@ It showcases:
 - Setup and teardown for test data
 - CI integration with GitHub Actions
 
-##### e2e tests  [![Playwright Tests](https://github.com/AlyonaCher/playwright-goodreads-e2e/blob/main/.github/workflows/playwright.yml/badge.svg)](https://github.com/AlyonaCher/playwright-goodreads-e2e/blob/main/.github/workflows/playwright.yml)
+##### e2e tests  [![Playwright Tests](https://github.com/AlyonaCher/playwright-goodreads-e2e/actions/workflows/playwright.yml/badge.svg)](https://github.com/AlyonaCher/playwright-goodreads-e2e/actions/workflows/playwright.yml)
 ---
 
 ## 🎯 Project Objectives
