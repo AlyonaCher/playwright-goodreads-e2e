@@ -32,7 +32,7 @@ jobs:
 
       env:
         STAGE_USER_PASS: ${{ secrets.STAGE_USER_PASS }}
-        CLIENT_SECRET: ${{ secrets.STAGE_USER_EMAIL }}
+        STAGE_USER_EMAIL: ${{ secrets.STAGE_USER_EMAIL }}
 
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
