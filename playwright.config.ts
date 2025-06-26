@@ -37,7 +37,7 @@ export default defineConfig({
       name: 'auth-setup',
       testMatch: /tests\/global\/auth-setup\.ts$/,
       use: {
-        //headless: false,
+        headless: false,
         launchOptions: {
           slowMo: 100,
         },
@@ -58,7 +58,7 @@ export default defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        //headless: false,
+        headless: false,
       },
       teardown: 'cleanup test data',
       dependencies: ['auth-setup'],
