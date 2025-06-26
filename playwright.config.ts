@@ -61,7 +61,7 @@ export default defineConfig({
         //headless: false,
       },
       teardown: 'cleanup test data',
-      //dependencies: ['auth-setup'],
+      dependencies: ['auth-setup'],
     },
   ],
 
