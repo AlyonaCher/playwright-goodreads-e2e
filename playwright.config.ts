@@ -47,7 +47,7 @@ export default defineConfig({
       name: 'cleanup test data',
       testMatch: /clean-up-teardown\.ts/,
       use: {
-        //headless: false,
+        headless: false,
         launchOptions: {
           slowMo: 100,
         },
@@ -58,7 +58,7 @@ export default defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        headless: false,
+        headless: true,
       },
       teardown: 'cleanup test data',
       dependencies: ['auth-setup'],
