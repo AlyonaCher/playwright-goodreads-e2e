@@ -1,0 +1,23 @@
+{
+  "name": "playwright_ts_goodreads",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "all": "npx playwright test tests/ --project chromium",
+    "e2e": "npx playwright test tests/e2e --project chromium"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.53.0",
+    "@types/node": "^24.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
+}
