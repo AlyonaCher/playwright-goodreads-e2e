@@ -16,6 +16,8 @@ It showcases:
 ##### e2e tests  [![Playwright Tests](https://github.com/AlyonaCher/playwright-goodreads-e2e/actions/workflows/playwright.yml/badge.svg)](https://github.com/AlyonaCher/playwright-goodreads-e2e/actions/workflows/playwright.yml)
 ---
 
+for Testomat reporting run: npm install @testomatio/reporter
+
 ## 👩‍💻 Author
 Alyona Chernova
 Test Engineer | Passionate about automation, quality, and clean code
