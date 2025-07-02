@@ -8,7 +8,7 @@ test.describe.configure({ mode: 'serial' });
 
 const book = envData.testData.bookForE2eTest[0];
 
-test('Add a book to "Want to Read" shelf and verify it appears there', async ({ homePage }) => {
+test('Add a book to "Want to Read" shelf and verify it appears there @T638b6d59', async ({ homePage }) => {
 
     await test.step('Search for a book and open its page', async () => {
         await homePage.searchForBook(book.title);
@@ -29,7 +29,7 @@ test('Add a book to "Want to Read" shelf and verify it appears there', async ({ 
     });
 });
 
-test('Add a book to "Currently Reading" shelf and verify it appears there', async ({ homePage }) => {
+test('Add a book to "Currently Reading" shelf and verify it appears there @T285fe5ee', async ({ homePage }) => {
 
     await test.step('Search for a book and open its page', async () => {
         await homePage.searchForBook(book.title);
@@ -50,7 +50,7 @@ test('Add a book to "Currently Reading" shelf and verify it appears there', asyn
     });
 });
 
-test('Add a book to "Read" shelf and verify it appears there', async ({ homePage }) => {
+test('Add a book to "Read" shelf and verify it appears there @T7c4e15a8', async ({ homePage }) => {
 
     await test.step('Search for a book and open its page', async () => {
         await homePage.searchForBook(book.title);
@@ -71,7 +71,7 @@ test('Add a book to "Read" shelf and verify it appears there', async ({ homePage
     });
 });
 
-test('Rate the book and validate confirmation and shelf', async ({ homePage }) => {
+test('Rate the book and validate confirmation and shelf @T5b1ecf00', async ({ homePage }) => {
 
     await test.step('Search for a book and open its page', async () => {
         await homePage.searchForBook(book.title);
@@ -92,7 +92,7 @@ test('Rate the book and validate confirmation and shelf', async ({ homePage }) =
     });
 });
 
-test('Remove rating and validate', async ({ homePage }) => {
+test('Remove rating and validate @Tf5fde926', async ({ homePage }) => {
 
     await test.step('Search for a book and open its page', async () => {
         await homePage.searchForBook(book.title);
@@ -113,7 +113,7 @@ test('Remove rating and validate', async ({ homePage }) => {
     });
 });
 
-test('Remove book from shelf and validate removal', async ({ homePage }) => {
+test('Remove book from shelf and validate removal @T1e11a592', async ({ homePage }) => {
 
     await test.step(`Delete Book `, async () => {
         await homePage.openMyBooksPage();

@@ -3,7 +3,7 @@ import envData from '../../test-data/stage-env-test-data';
 
 test.describe.configure({ mode: 'parallel' });
 
-test('displays all books across all shelves when "All" shelf is selected', async ({ myBooksPage }) => {
+test('displays all books across all shelves when "All" shelf is selected @Tbde6e07f', async ({ myBooksPage }) => {
 
   //ARRANGE
   const booksOnAllShelf = envData.testData.booksOnMyShelves;
@@ -17,7 +17,7 @@ test('displays all books across all shelves when "All" shelf is selected', async
   }
 });
 
-test('shows only "Want To Read" books when that shelf is selected', async ({ myBooksPage }) => {
+test('shows only "Want To Read" books when that shelf is selected @Te3036f1b', async ({ myBooksPage }) => {
   //ARRANGE
   const booksOnWantToreadShelf = envData.testData.booksOnMyShelves.filter(book => book.shelf === 'Want To Read');
   const booksNotOnWantToreadShelf = envData.testData.booksOnMyShelves.filter(book => book.shelf !== 'Want To Read');
@@ -35,7 +35,7 @@ test('shows only "Want To Read" books when that shelf is selected', async ({ myB
   }
 });
 
-test('shows only "Currently Reading" books when that shelf is selected', async ({ myBooksPage }) => {
+test('shows only "Currently Reading" books when that shelf is selected @Te9c41daa', async ({ myBooksPage }) => {
   //ARRANGE
   const booksOnCurrentlyReadingShelf = envData.testData.booksOnMyShelves.filter(book => book.shelf === 'Currently Reading');
   const booksNotOnCurrentlyReadingShelf = envData.testData.booksOnMyShelves.filter(book => book.shelf !== 'Currently Reading');
@@ -53,7 +53,7 @@ test('shows only "Currently Reading" books when that shelf is selected', async (
   }
 });
 
-test('shows only "Read" books when that shelf is selected', async ({ myBooksPage }) => {
+test('shows only "Read" books when that shelf is selected @T8df8fdd2', async ({ myBooksPage }) => {
   //ARRANGE
   const booksOnReadShelf = envData.testData.booksOnMyShelves.filter(book => book.shelf === 'Read');
   const booksNotOnReadShelf = envData.testData.booksOnMyShelves.filter(book => book.shelf !== 'Read');
