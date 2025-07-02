@@ -21,6 +21,11 @@ export default defineConfig({
 
   reporter: [
     ['html', { open: 'on-failure', title: `Playwright Test Report - ${now}` }],
+    ['./node_modules/@testomatio/reporter/lib/adapter/playwright.js',
+      {
+        apiKey: process.env.TESTOMATIO!, // Your Testomat.io API key
+      }
+    ]
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
