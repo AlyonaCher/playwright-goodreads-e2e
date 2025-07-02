@@ -1,11 +1,6 @@
-name: Goodreads e2e Tests
+name: Testomat Goodreads e2e Tests
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
   workflow_dispatch:
 
 jobs:
