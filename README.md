@@ -12,11 +12,14 @@ It showcases:
 - how to use storage state for authentication
 - how to work with Setup and teardown for test data
 - how to do CI integration with GitHub Actions
+- how to integrate your test project with test management system Testomat to keep your TCs up-to-date without any manual work
 
 ##### e2e tests  [![Playwright Tests](https://github.com/AlyonaCher/playwright-goodreads-e2e/actions/workflows/playwright.yml/badge.svg)](https://github.com/AlyonaCher/playwright-goodreads-e2e/actions/workflows/playwright.yml)
 ---
 
 for Testomat reporting run: npm install @testomatio/reporter
+
+![Testomat-GitHub Actions integration: we’re seeing real-time updates as the tests run](image.png)
 
 ## 👩‍💻 Author
 Alyona Chernova
