@@ -9,7 +9,33 @@ on:
   workflow_dispatch:
 
 jobs:
+
+  # Auto Import: https://docs.testomat.io/workflows/import/
+  update-tests:
+    runs-on: ubuntu-latest
+
+    steps:        
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+
+    - name: Import tests and update IDs
+      # check-tests: https://github.com/testomatio/check-tests/blob/master/README.md
+      run: npx check-tests Playwright "**/*{.,_}{test,spec,cy}.ts" --update-ids --typescript
+      env:
+        TESTOMATIO: ${{ secrets.TESTOMATIO }}
+
+    - name: Commit and push changes
+      uses: stefanzweifel/git-auto-commit-action@v5.0.1
+      with:
+        commit_message: "Updated test IDs"
+
   test:
+    needs: [update-tests]
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
@@ -27,12 +53,17 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
+      - name: Install Playwright Reporter
+        run: npm install @testomatio/reporter --save-dev
+
       - name: Run Playwright tests in headed mode
         run: xvfb-run --auto-servernum --server-args='-screen 0 1280x720x24' npx playwright test tests/ --project chromium
 
         env:
           STAGE_USER_PASS: ${{ secrets.STAGE_USER_PASS }}
           STAGE_USER_EMAIL: ${{ secrets.STAGE_USER_EMAIL }}
+          TESTOMATIO: ${{ github.event.inputs.testomatio || secrets.HMI_TESTOMATIO_API_KEY }}
+          TESTOMATIO_RUN: ${{ github.event.inputs.run }}
 
       - uses: actions/upload-artifact@v4
         if: always()
