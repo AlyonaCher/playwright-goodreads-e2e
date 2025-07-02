@@ -2,6 +2,14 @@ name: Testomat Goodreads e2e Tests
 
 on:
   workflow_dispatch:
+    inputs:
+      grep:            
+          description: 'tests to grep '
+          required: false 
+      run:
+          required: false
+      testomatio: 
+          required: false  
 
 jobs:
 
