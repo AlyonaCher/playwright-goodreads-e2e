@@ -57,7 +57,7 @@ jobs:
         env:
           STAGE_USER_PASS: ${{ secrets.STAGE_USER_PASS }}
           STAGE_USER_EMAIL: ${{ secrets.STAGE_USER_EMAIL }}
-          TESTOMATIO: ${{ github.event.inputs.testomatio || secrets.HMI_TESTOMATIO_API_KEY }}
+          TESTOMATIO: ${{ github.event.inputs.testomatio || secrets.TESTOMATIO }}
           TESTOMATIO_RUN: ${{ github.event.inputs.run }}
 
       - uses: actions/upload-artifact@v4
