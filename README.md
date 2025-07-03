@@ -21,6 +21,8 @@ for Testomat reporting run: npm install @testomatio/reporter
 
 ![Testomat-GitHub Actions integration: we’re seeing real-time updates as the tests run](image.png)
 
+Quick demo for Testomat - GitHub Actions integration [demo](https://screenapp.io/app/#/shared/uHpv3oKqbx)
+
 ## 👩‍💻 Author
 Alyona Chernova
 Test Engineer | Passionate about automation, quality, and clean code
